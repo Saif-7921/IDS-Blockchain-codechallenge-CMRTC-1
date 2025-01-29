@@ -1,5 +1,5 @@
 class Token:
-    def _init_(self, name, symbol, initial_supply):
+    def __init__(self, name, symbol, initial_supply):  # Fix: __init__ instead of _init_
         self.name = name
         self.symbol = symbol
         self.supply = initial_supply  # Total supply of tokens in circulation
@@ -84,3 +84,4 @@ my_token.distribute_tokens(mint_amounts)
 print(f"Final Treasury Balance: {my_token.get_balance('Treasury')}")
 print(f"Final Recipient Balance: {my_token.get_balance('Recipient')}")
 print(f"Total Supply: {my_token.get_total_supply()}")
+
